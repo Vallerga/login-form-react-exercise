@@ -4,7 +4,7 @@ const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();        
-        let check = (Object.keys(event.target.elements[0].value).length === 0);
+        let check = (Object.keys(event.target.elements[0].value).length === 0)||(Object.keys(event.target.elements[1].value).length === 0)||(event.target.elements[2].value === "Nazionalità");
         if (!check) {
             let buffer = {
                 email: event.target.elements[0].value,
@@ -17,10 +17,10 @@ const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
             setBoolProp(true);
             
         } else {
-            alert("Inserire città")
+            alert("compilare tutti i campi")
         }        
     }
-    console.log(`formOutput: ${JSON.stringify(formOut)}`)
+    //console.log(`formOutput: ${JSON.stringify(formOut)}`)
 
     return (
         <div className='d-flex flex-column justify-content-center backBox mt-5'>
