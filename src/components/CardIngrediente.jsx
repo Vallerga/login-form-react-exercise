@@ -10,9 +10,9 @@ const CardIngrediente = () => {
 
   return (
     <>
-      <div className="position-relative d-flex align-items-center justify-content-center pt-5">
+      <div className="position-relative d-flex align-items-center justify-content-center heightSett pt-5">
         <img className="position-absolute imgFullScreen" src={require("../assets/pesto.jpg")} alt="pesto" />
-        <Card className="w-25 text-center">
+        <Card className="w-25 text-center indexSett">
           <Card.Header>{dbBasilico[indiceCard].ingrediente}</Card.Header>
           <Card.Body>
             <Card.Title>{dbBasilico[indiceCard].quantità} - {dbBasilico[indiceCard].prezzo}</Card.Title>

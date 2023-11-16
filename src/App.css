@@ -17,7 +17,11 @@
 
 .imgFullScreen {
     width: 100%;
-    aspect-ratio: 2.89 / 2;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+    left: 0;
+    top: 0;
 }
 
 .loginBG {
@@ -26,6 +30,7 @@
     left: 0;
     top: 0;
     z-index: 5;
+    object-fit: cover;
 }
 
 .indexSett {
@@ -39,5 +44,5 @@
 .bgHome {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    padding: 100px 50px;
+    padding: 100px 50px 50px;
 }

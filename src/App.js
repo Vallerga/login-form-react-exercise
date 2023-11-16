@@ -18,17 +18,17 @@ function App() {
   }
   return (
     <indice.Provider value={indiceDinamico}>
-    <indiceFunction.Provider value={handleClick}>
-    <dbBasilicoContext.Provider value={databaseBasilico}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/pestogenovese" element={<PestoGenovese />} />
-          <Route path="/ingrediente" element={<CardIngrediente />} />
-        </Routes>
-      </BrowserRouter>
-    </dbBasilicoContext.Provider>
-    </indiceFunction.Provider>
+      <indiceFunction.Provider value={handleClick}>
+        <dbBasilicoContext.Provider value={databaseBasilico}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/pestogenovese" element={<PestoGenovese />} />
+              <Route path="/ingrediente" element={<CardIngrediente />} />
+            </Routes>
+          </BrowserRouter>
+        </dbBasilicoContext.Provider>
+      </indiceFunction.Provider>
     </indice.Provider>
   );
 }
