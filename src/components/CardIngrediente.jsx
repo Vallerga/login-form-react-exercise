@@ -8,12 +8,12 @@ const CardIngrediente = () => {
 
   return (
     <>
-      <div className="position-relative d-flex align-items-center justify-content-center heightSett pt-5">
+      <div className="position-relative d-flex align-items-center justify-content-center heightSett pt-5 text-primary">
         <img className="position-absolute imgFullScreen" src={require("../assets/pesto.jpg")} alt="pesto" />
         <Card className="w-25 text-center indexSett">
-          <Card.Header>{multipleValContext[0][multipleValContext[2]].ingrediente}</Card.Header>
+          <Card.Header className="fs-3 fw-bold text-uppercase">{multipleValContext[0][multipleValContext[2]].ingrediente}</Card.Header>
           <Card.Body>
-            <Card.Title>{multipleValContext[0][multipleValContext[2]].quantità} - {multipleValContext[0][multipleValContext[2]].prezzo}</Card.Title>
+            <Card.Title className="fs-5 fw-bold">{multipleValContext[0][multipleValContext[2]].quantità} - {multipleValContext[0][multipleValContext[2]].prezzo}</Card.Title>
             <Card.Text className="justifyCSS">
               {multipleValContext[0][multipleValContext[2]].descrizione}
             </Card.Text>

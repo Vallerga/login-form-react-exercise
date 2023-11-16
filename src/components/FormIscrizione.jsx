@@ -42,10 +42,12 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
                         <option value="SPAGNA">SPAGNA</option>
                         <option value="GERMANIA">GERMANIA</option>
                     </Form.Select></Form.Group>
+                    <div className="d-flex align-items-center justify-content-between w-100">
                 <Button variant="primary" type="submit">
                     Iscrivimi
                 </Button>
-                <Link to={"/pestogenovese"}><Button className="mt-3" type="button">Accedi</Button></Link>
+                <Link to={"/pestogenovese"}><Button type="button">Accedi</Button></Link>
+                    </div>
             </Form>
         </div>
     )
