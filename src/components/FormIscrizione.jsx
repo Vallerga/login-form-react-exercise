@@ -1,4 +1,5 @@
 import { Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
 
@@ -15,26 +16,24 @@ const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
             newArr.push(buffer);
             setForm(newArr)
             setBoolProp(true);
+            event.target.reset();
             
         } else {
             alert("compilare tutti i campi")
         }        
     }
-    //console.log(`formOutput: ${JSON.stringify(formOut)}`)
 
     return (
-        <div className='d-flex flex-column justify-content-center backBox mt-5'>
-            <Form onSubmit={handleSubmit} className="d-flex flex-column align-items-center text-light py-5">
-                <Form.Group className="mb-2" controlId="email">
+            <Form onSubmit={handleSubmit} className="d-flex flex-column align-items-start text-primary px-5">
+                <Form.Group controlId="email">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
                 </Form.Group>
-
-                <Form.Group className="mb-3" controlId="password">
+                <Form.Group className="mb-4" controlId="password">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="nazionalita">
+                <Form.Group className="mb-4" controlId="nazionalita">
                     <Form.Select aria-label="Default select example">
                         <option>Nazionalità</option>
                         <option value="ITALIA">ITALIA</option>
@@ -42,11 +41,11 @@ const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
                         <option value="SPAGNA">SPAGNA</option>
                         <option value="GERMANIA">GERMANIA</option>
                     </Form.Select></Form.Group>
-                <Button variant="warning" type="submit">
+                <Button variant="primary" type="submit">
                     Iscrivimi
                 </Button>
+                <Link to={"/pestogenovese"}><Button className="mt-3" type="button">Accedi</Button></Link>
             </Form>
-        </div>
     )
 }
 export default FormIscrizione;
