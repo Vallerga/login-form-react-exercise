@@ -1,13 +1,11 @@
 import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { dbBasilicoContext } from "../App";
-import { indiceFunction } from "../App";
+import { arrContext } from "../App";
 import { LinkContainer } from "react-router-bootstrap";
 
 const PestoGenovese = () => {
-    let dbBasilico = useContext(dbBasilicoContext);
-    let handleClickCont = useContext(indiceFunction);
+    let multipleValContext = useContext(arrContext);
     return (
         <>
             <div className="d-flex flex-column align-items-center mt-5">
@@ -21,9 +19,9 @@ const PestoGenovese = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {dbBasilico.map((ingrediente, i) => {
+                        {multipleValContext[0].map((ingrediente, i) => {
                             return (
-                                <LinkContainer onClick={() => handleClickCont(i)} className="w-100" style={{textDecoration: 'none', color: 'black'}} to={"/ingrediente"}>
+                                <LinkContainer onClick={() => multipleValContext[1](i)} className="w-100" style={{textDecoration: 'none', color: 'black'}} to={"/ingrediente"}>
                                     <tr className="text-center" key={i + "ingrediente"}>
                                         <td>{ingrediente.indice}</td>
                                         <td className="text-start">{ingrediente.ingrediente}</td>

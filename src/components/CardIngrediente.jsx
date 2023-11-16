@@ -1,23 +1,21 @@
 import { useContext } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { dbBasilicoContext } from "../App";
-import { indice } from "../App";
+import { arrContext,} from "../App";
 
-const CardIngrediente = () => {
-  let dbBasilico = useContext(dbBasilicoContext);
-  let indiceCard = useContext(indice);
+const CardIngrediente = () => {  
+  let multipleValContext = useContext(arrContext);
 
   return (
     <>
       <div className="position-relative d-flex align-items-center justify-content-center heightSett pt-5">
         <img className="position-absolute imgFullScreen" src={require("../assets/pesto.jpg")} alt="pesto" />
         <Card className="w-25 text-center indexSett">
-          <Card.Header>{dbBasilico[indiceCard].ingrediente}</Card.Header>
+          <Card.Header>{multipleValContext[0][multipleValContext[2]].ingrediente}</Card.Header>
           <Card.Body>
-            <Card.Title>{dbBasilico[indiceCard].quantità} - {dbBasilico[indiceCard].prezzo}</Card.Title>
+            <Card.Title>{multipleValContext[0][multipleValContext[2]].quantità} - {multipleValContext[0][multipleValContext[2]].prezzo}</Card.Title>
             <Card.Text className="justifyCSS">
-              {dbBasilico[indiceCard].descrizione}
+              {multipleValContext[0][multipleValContext[2]].descrizione}
             </Card.Text>
             <Link to={"/PestoGenovese"}><Button className="mt-3" type="button">Indietro</Button></Link>
           </Card.Body>

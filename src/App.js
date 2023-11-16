@@ -10,6 +10,7 @@ import CardIngrediente from './components/CardIngrediente';
 export const dbBasilicoContext = createContext();
 export const indiceFunction = createContext();
 export const indice = createContext();
+export const arrContext = createContext();
 
 function App() {
   const [indiceDinamico, setIndiceDinamico] = useState(0)
@@ -17,19 +18,16 @@ function App() {
     setIndiceDinamico(arg);
   }
   return (
-    <indice.Provider value={indiceDinamico}>
-      <indiceFunction.Provider value={handleClick}>
-        <dbBasilicoContext.Provider value={databaseBasilico}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/pestogenovese" element={<PestoGenovese />} />
-              <Route path="/ingrediente" element={<CardIngrediente />} />
-            </Routes>
-          </BrowserRouter>
-        </dbBasilicoContext.Provider>
-      </indiceFunction.Provider>
-    </indice.Provider>
+    <arrContext.Provider value={[databaseBasilico, handleClick, indiceDinamico]}>
+      
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/pestogenovese" element={<PestoGenovese />} />
+                <Route path="/ingrediente" element={<CardIngrediente />} />
+              </Routes>
+            </BrowserRouter>
+    </arrContext.Provider>
   );
 }
 
