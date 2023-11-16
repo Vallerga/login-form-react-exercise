@@ -1,3 +1,7 @@
+body{
+    font-family: "Times New Roman", Times, serif;
+}
+
 .imgBasilico {
     width: 100vw;
     max-height: 300px;
@@ -44,5 +48,5 @@
 .bgHome {
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
-    padding: 100px 50px 50px;
+    padding: 50px;
 }

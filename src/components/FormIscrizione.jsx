@@ -1,11 +1,11 @@
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
+const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
 
     const handleSubmit = (event) => {
-        event.preventDefault();        
-        let check = (Object.keys(event.target.elements[0].value).length === 0)||(Object.keys(event.target.elements[1].value).length === 0)||(event.target.elements[2].value === "Nazionalità");
+        event.preventDefault();
+        let check = (Object.keys(event.target.elements[0].value).length === 0) || (Object.keys(event.target.elements[1].value).length === 0) || (event.target.elements[2].value === "Nazionalità");
         if (!check) {
             let buffer = {
                 email: event.target.elements[0].value,
@@ -17,13 +17,14 @@ const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
             setForm(newArr)
             setBoolProp(true);
             event.target.reset();
-            
+
         } else {
             alert("compilare tutti i campi")
-        }        
+        }
     }
 
     return (
+        <div>            
             <Form onSubmit={handleSubmit} className="d-flex flex-column align-items-start text-primary px-5">
                 <Form.Group controlId="email">
                     <Form.Label>Email address</Form.Label>
@@ -46,6 +47,7 @@ const FormIscrizione = ({setForm, formOut, setBoolProp, boolProp }) => {
                 </Button>
                 <Link to={"/pestogenovese"}><Button className="mt-3" type="button">Accedi</Button></Link>
             </Form>
+        </div>
     )
 }
 export default FormIscrizione;
