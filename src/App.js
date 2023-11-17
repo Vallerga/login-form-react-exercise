@@ -18,8 +18,7 @@ function App() {
     setIndiceDinamico(arg);
   }
   return (
-    <arrContext.Provider value={[databaseBasilico, handleClick, indiceDinamico]}>
-      
+    <arrContext.Provider value={[databaseBasilico, handleClick, indiceDinamico]}>      
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Home />} />
