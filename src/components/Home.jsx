@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <div className="indexSett position-relative d-flex align-items-center justify-content-center">
         <div className="heightSett">
-          <img className="position-absolute loginBG" src={require("../assets/mortaio.jpg")} alt="mortaio" />
+          <img className="position-absolute imgFullScreen" src={require("../assets/mortaio.jpg")} alt="mortaio" />
         </div>
         <div className="indexSett bgHome">
           <h1 className="text-center text-primary pb-3">CUCINA GENOVESE DOP</h1>

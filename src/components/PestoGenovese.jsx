@@ -10,7 +10,7 @@ const PestoGenovese = () => {
         <>
             <div className="position-relative d-flex align-items-center justify-content-center">
                 <div className="heightSett">
-                    <img className="position-absolute tableBG" src={require("../assets/pesto_tabella.webp")} alt="mortaio" />
+                    <img className="position-absolute imgFullScreen" src={require("../assets/pesto_tabella.webp")} alt="mortaio" />
                 </div>
                 <div className="d-flex flex-column align-items-center bgHome indexSett pt-4">
                     <h1 className="text-primary mb-3">INGREDIENTI</h1>

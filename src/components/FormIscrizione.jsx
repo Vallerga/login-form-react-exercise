@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { arrContext } from "../App";
 
 const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
+    let multipleValContext = useContext(arrContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -15,6 +18,7 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
             let newArr = formOut.map((el) => el);
             newArr.push(buffer);
             setForm(newArr)
+            multipleValContext[4](newArr)
             setBoolProp(true);
             event.target.reset();
 
@@ -46,7 +50,7 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
                 <Button variant="primary" type="submit">
                     Iscrivimi
                 </Button>
-                <Link to={"/pestogenovese"}><Button type="button">Accedi</Button></Link>
+                <Link to={"/"}><Button type="button">Login</Button></Link>
                     </div>
             </Form>
         </div>
