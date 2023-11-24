@@ -8,9 +8,7 @@ import databaseBasilico from "./assets/datapesto.json";
 import CardIngrediente from './components/CardIngrediente';
 import Accedi from './components/Accedi';
 
-export const dbBasilicoContext = createContext();
-export const indiceFunction = createContext();
-export const indice = createContext();
+
 export const arrContext = createContext();
 
 function App() {
@@ -21,7 +19,7 @@ function App() {
     setIndiceDinamico(arg);
   }
   return (
-    <arrContext.Provider value={[databaseBasilico, handleClick, indiceDinamico, iscritti, setIscritti]}>      
+    <arrContext.Provider value={[databaseBasilico, handleClick, indiceDinamico, iscritti, setIscritti]}>
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Accedi />} />

@@ -9,12 +9,16 @@ const Accedi = () => {
 
     const handleSubmit2 = (event) => {
         event.preventDefault();
-        if (multipleValContext)
-            if (multipleValContext[3][0].email.includes(event.target.elements[0].value) && multipleValContext[3][0].password.includes(event.target.elements[1].value))
-                setProfile(true);
+        if (multipleValContext) {
+            let myUser = multipleValContext[3].filter(user => user.email.includes(event.target.elements[0].value));
+            console.log(myUser[0].password)
+            if (myUser[0].password === event.target.elements[1].value)
+                setProfile(true)
+        }
     }
 
     if (profile !== null) {
+        //navigate("/");
         return <Navigate to="/pestogenovese" />
     }
 
