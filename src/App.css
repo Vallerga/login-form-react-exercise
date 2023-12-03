@@ -42,3 +42,7 @@ body {
     border-radius: 15px;
     padding: 50px;
 }
+
+.cancelIcon{
+    height: 37px;
+}

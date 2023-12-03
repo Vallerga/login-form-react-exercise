@@ -13,10 +13,10 @@ const PestoGenovese = () => {
                     <img className="position-absolute imgFullScreen" src={require("../assets/pesto_tabella.webp")} alt="mortaio" />
                 </div>
                 <div className="d-flex flex-column align-items-center bgHome indexSett pt-4">
-                    <h1 className="text-primary mb-3">INGREDIENTI</h1>
-                    <Table hover variant="primary" className="indexSett text-primary">
+                    <h1 className="text-dark mb-3 fs-1">INGREDIENTI</h1>
+                    <Table hover striped bordered variant="light" className="indexSett fs-4 text-primary">
                         <thead>
-                            <tr>
+                            <tr className="fw-bold">
                                 <th>#</th>
                                 <th>ingrediente</th>
                                 <th>prezzo</th>
@@ -27,11 +27,11 @@ const PestoGenovese = () => {
                             {multipleValContext[0].map((ingrediente, i) => {
                                 return (
                                     <LinkContainer key={i + "ingrediente"} onClick={() => multipleValContext[1](i)} className="w-100" to={"/ingrediente"}>
-                                        <tr className="text-center text-primary">
+                                        <tr className="text-center text-dark fs-4">
                                             <td>{ingrediente.indice}</td>
                                             <td className="text-start">{ingrediente.ingrediente}</td>
                                             <td>{ingrediente.prezzo}</td>
-                                            <td>{ingrediente.quantità}</td>
+                                            <td>{ingrediente.quantita}</td>
                                         </tr>
                                     </LinkContainer >
                                 )
@@ -39,7 +39,7 @@ const PestoGenovese = () => {
                         </tbody>
                     </Table>
                     <Link className="indexSett" to={"/"}>
-                        <Button className="mt-3" type="button">Disconnettiti</Button>
+                        <Button className="mt-3 fs-4" type="button">Disconnettiti</Button>
                     </Link>
                 </div>
             </div>

@@ -13,7 +13,7 @@ const Home = () => {
         </div>
         <div className="indexSett bgHome">
           <h1 className="text-center text-primary pb-3">CUCINA GENOVESE DOP</h1>
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex align-items-center justify-content-center fs-4">
             <FormIscrizione setForm={setFormOutput} formOut={formOutput} setBoolProp={setBool} boolProp={bool} />
             <Lavagna setForm={setFormOutput} formOut={formOutput} setBoolProp={setBool} boolProp={bool} />
           </div>

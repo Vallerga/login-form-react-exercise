@@ -18,7 +18,6 @@ const Accedi = () => {
     }
 
     if (profile !== null) {
-        //navigate("/");
         return <Navigate to="/pestogenovese" />
     }
 
@@ -29,19 +28,19 @@ const Accedi = () => {
             </div>
             <Form onSubmit={handleSubmit2} className="d-flex flex-column align-items-center text-primary bgHome indexSett px-5">
                 <h1 className="text-primary mb-3">SAPORI LIGURI</h1>
-                <Form.Group controlId="email2">
+                <Form.Group className="fs-4" controlId="email2">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control className="fs-4" type="email" placeholder="Enter email" />
                 </Form.Group>
-                <Form.Group className="mb-4" controlId="password2">
+                <Form.Group className="fs-4 mb-4" controlId="password2">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control className="fs-4" type="password" placeholder="Password" />
                 </Form.Group>
                 <div className="d-flex align-items-center justify-content-between w-100">
-                    <Button variant="primary" type="submit">
+                    <Button className="fs-4" variant="primary" type="submit">
                         Accedi
                     </Button>
-                    <Link to={"/registrazione"}><Button type="button">Iscriviti</Button></Link>
+                    <Link to={"/registrazione"}><Button className="fs-4" type="button">Iscriviti</Button></Link>
                 </div>
             </Form>
         </div>
