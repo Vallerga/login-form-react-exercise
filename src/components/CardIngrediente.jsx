@@ -17,7 +17,7 @@ const CardIngrediente = () => {
             <Card.Text className="justifyCSS fs-4">
               {multipleValContext[0][multipleValContext[2]].descrizione}
             </Card.Text>
-            <Link to={"/PestoGenovese"}><Button className="mt-3 fs-4" type="button">Indietro</Button></Link>
+            <Link to={"/ListaIngredienti"}><Button className="mt-3 fs-4" type="button">Indietro</Button></Link>
           </Card.Body>
         </Card>
       </div>

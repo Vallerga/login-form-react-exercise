@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import PestoGenovese from './components/PestoGenovese';
+import ListaIngredienti from './components/ListaIngredienti';
 import { createContext, useEffect, useState } from 'react';
 import CardIngrediente from './components/CardIngrediente';
 import Accedi from './components/Accedi';
@@ -15,6 +15,7 @@ function App() {
   // const [iscritti, setIscritti] = useState([])
   const [ingredienti, setIngredienti] = useState([])
   const [profili, setProfili] = useState([])
+  const [modificaDB, setModificaDB] = useState(0)
 
   // Chiamata AJAX per scaricare dal DB i dati relativi alla ricetta pesto
   useEffect(() => {
@@ -24,7 +25,7 @@ function App() {
         setIngredienti(resJSON);
       }        
       fetchData()
-    }, [])
+    }, [modificaDB])
 
     // Chiamata AJAX per scaricare l'elenco degli utenti iscritti al servizio
     useEffect(() => {
@@ -40,14 +41,14 @@ function App() {
   const handleClick = (arg) => {
     setIndiceDinamico(arg);
   }
-
+  
   return (
-    <arrContext.Provider value={[ingredienti, handleClick, indiceDinamico, profili, setProfili]}>
+    <arrContext.Provider value={[ingredienti, handleClick, indiceDinamico, profili, setProfili, modificaDB, setModificaDB]}>
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Accedi />} />
                 <Route path="/registrazione" element={<Home />} />
-                <Route path="/pestogenovese" element={<PestoGenovese />} />
+                <Route path="/ListaIngredienti" element={<ListaIngredienti />} />
                 <Route path="/ingrediente" element={<CardIngrediente />} />
               </Routes>
             </BrowserRouter>

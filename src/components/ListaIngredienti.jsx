@@ -1,11 +1,14 @@
 import { Button, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { arrContext } from "../App";
+import ModaleIngredienti from "./ModaleIngredienti";
 
-const PestoGenovese = () => {
+const ListaIngredienti = () => {
     let multipleValContext = useContext(arrContext);
+    const [modalShow, setModalShow] = useState(false);
+
     return (
         <>
             <div className="position-relative d-flex align-items-center justify-content-center">
@@ -38,6 +41,13 @@ const PestoGenovese = () => {
                             })}
                         </tbody>
                     </Table>
+                    <Button className="fs-4 my-3" variant="primary" onClick={() => setModalShow(true)}>
+                        Vuoi personalizzare la ricetta?
+                    </Button>
+                    <ModaleIngredienti
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                    />
                     <Link className="indexSett" to={"/"}>
                         <Button className="mt-3 fs-4" type="button">Disconnettiti</Button>
                     </Link>
@@ -46,4 +56,4 @@ const PestoGenovese = () => {
         </>
     )
 }
-export default PestoGenovese;
+export default ListaIngredienti;

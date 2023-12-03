@@ -29,13 +29,13 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
         }
     }
 
-    const postProfilo = async (newProfile) => {
+    const postProfilo = async (nuovoProfile) => {
         const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/home/iscriviti", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(newProfile),
+            body: JSON.stringify(nuovoProfile),
           });
           
         const resJSON = await response.json();

@@ -18,7 +18,7 @@ const Accedi = () => {
     }
 
     if (profile !== null) {
-        return <Navigate to="/pestogenovese" />
+        return <Navigate to="/ListaIngredienti" />
     }
 
     return (
