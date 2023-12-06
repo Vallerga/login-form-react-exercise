@@ -27,6 +27,7 @@ const ListaIngredienti = () => {
                             </tr>
                         </thead>
                         <tbody>
+                            {/* <LinkContainer key={i + "ingrediente"} onClick={() => multipleValContext[1](i)} className="w-100" to={"/ingrediente"}> */}
                             {multipleValContext[0].map((ingrediente, i) => {
                                 return (
                                     <LinkContainer key={i + "ingrediente"} onClick={() => multipleValContext[1](i)} className="w-100" to={"/ingrediente"}>
@@ -36,7 +37,7 @@ const ListaIngredienti = () => {
                                             <td>{ingrediente.prezzo}</td>
                                             <td>{ingrediente.quantita}</td>
                                         </tr>
-                                    </LinkContainer >
+                                    </LinkContainer>
                                 )
                             })}
                         </tbody>
@@ -52,7 +53,7 @@ const ListaIngredienti = () => {
                         <Button className="mt-3 fs-4" type="button">Disconnettiti</Button>
                     </Link>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

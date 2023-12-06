@@ -20,7 +20,7 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
             setForm(newArr)
             multipleValContext[4](newArr)
             // post nel db il profilo
-            postProfilo(buffer)
+            postProfilo(buffer, newArr)
             setBoolProp(true)
             event.target.reset()
 
@@ -29,7 +29,7 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
         }
     }
 
-    const postProfilo = async (nuovoProfile) => {
+    const postProfilo = async (nuovoProfile, oldArrayProfili) => {
         const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/home/iscriviti", {
             method: "POST",
             headers: {
@@ -39,8 +39,8 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
           });
           
         const resJSON = await response.json();
-        multipleValContext[4](resJSON);
-        console.log(`profili: ${resJSON}`)
+        oldArrayProfili.push(resJSON)
+        multipleValContext[4](oldArrayProfili);
       }
 
     return (

@@ -12,7 +12,6 @@ export const arrContext = createContext();
 
 function App() {
   const [indiceDinamico, setIndiceDinamico] = useState(0)
-  // const [iscritti, setIscritti] = useState([])
   const [ingredienti, setIngredienti] = useState([])
   const [profili, setProfili] = useState([])
   const [modificaDB, setModificaDB] = useState(0)
@@ -33,7 +32,6 @@ function App() {
           const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/home/login/listaprofili");
           const resJSON = await response.json();
           setProfili(resJSON);
-          // console.log(`profili: ${resJSON}`)
         }
         fetchData()
       }, [])

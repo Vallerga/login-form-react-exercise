@@ -4,7 +4,7 @@
     "prezzo": "2,83€ al kg",
     "quantita": "70g",
     "descrizione": "Il Basilico Genovese DOP si contraddistingue per le foglie di dimensioni medio-piccole, forma ovale e convessa, colore verde tenue. L'altezza della pianta varia da media a molto alta. Il profumo è particolarmente delicato, privo di sentori di menta.",
-    "img": "../assets/basilico.jpg"
+    "imgUrl": "../assets/basilico.jpg"
 },
 {
     "indice": 2,
@@ -12,7 +12,7 @@
     "prezzo": "15,90€ al kg",
     "quantita": "80g",
     "descrizione": "Il Parmigiano Reggiano DOP ha forma cilindrica, diametro di 35-45 cm, altezza 20-26 cm, peso minimo di 30 e medio di 40-42 kg. La crosta è di colore giallo dorato. La pasta è dura con colore da leggermente paglierino a paglierino. La struttura è minutamente granulosa, con frattura a scaglia.",
-    "img": "https://images.dissapore.com/wp-content/uploads/2016/09/parmigiano-reggiano-forma.jpg?width=1280&height=720&quality=75"
+    "imgUrl": "https://images.dissapore.com/wp-content/uploads/2016/09/parmigiano-reggiano-forma.jpg?width=1280&height=720&quality=75"
 },
 {
     "indice": 3,
@@ -20,7 +20,7 @@
     "prezzo": "87€ al kg",
     "quantita": "30g",
     "descrizione": "I pinoli sono un sano capolavoro di sapore, piccole perle di gusto che impiegano tre anni a maturare all'interno dei loro scrigni, le pigne. Tra tutti i pini, quello tipico che caratterizza il panorama delle coste del mediterraneo è l'albero che produce i pinoli più famosi e consumati.",
-    "img": "https://www.chiellini.net/wp-content/uploads/I-pinoli-Chiellini.jpg"
+    "imgUrl": "https://www.chiellini.net/wp-content/uploads/I-pinoli-Chiellini.jpg"
 },
 {
     "indice": 4,
@@ -28,7 +28,7 @@
     "prezzo": "1,50€ al kg",
     "quantita": "3g",
     "descrizione": "Il sale marino grosso si ottiene dall'acqua di mare per evaporazione naturale e cristallizzazione frazionata con successivo lavaggio in controcorrente con salamoia satura, centrifugazione, essiccamento in forni a letto fluido a 225°C e vagliatura di selezione per risonanza.",
-    "img": "mortaio.jpg"
+    "imgUrl": "mortaio.jpg"
 },
 {
     "indice": 5,
@@ -36,7 +36,7 @@
     "prezzo": "11,90€ al kg",
     "quantita": "70g",
     "descrizione": "L'olio D.o.p. “Riviera Ligure Riviera dei Fiori” si presenta di colorazione tra il giallo paglierino e l'oro; dal profumo delicato ed intenso, risulta al palato di una eleganza straordinaria, con aromi intensi di mandorla e pinolo.",
-    "img": "https://www.italiadelight.it/wp-content/uploads/2023/05/olio-olive-taggiasche.jpg"
+    "imgUrl": "https://www.italiadelight.it/wp-content/uploads/2023/05/olio-olive-taggiasche.jpg"
 },
 {
     "indice": 6,
@@ -44,12 +44,5 @@
     "prezzo": "23,90€ al kg",
     "quantita": "2 spicchi",
     "descrizione": "Le caratteristiche principali di questa varietà sono l'aroma intenso accompagnato da un gusto delicato, è un aglio molto digeribile ed ha una buona conservabilità; queste caratteristiche vengono date dal clima mite (la valle Arroscia si trova ai piedi delle Alpi, al tempo stesso risente ancora dell'influenza del clima della costa ligure) e dai terreni particolarmente vocati a questa coltivazione.",
-    "img": "https://scontent-mxp1-1.xx.fbcdn.net/v/t39.30808-6/355098498_105620022576635_6989344213827958710_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=783fdb&_nc_ohc=29EXYvn1XlUAX8Cjcr0&_nc_ht=scontent-mxp1-1.xx&oh=00_AfBJaxBp0i8UuEHpf75aB96emd3ly47PI-2aRnpzJQkyLw&oe=656FA2C3"
-},
-{"indice": 4,
-"ingrediente": "sale Grosso",
-"prezzo": "1,50€ al kg",
-"quantita": "3g",
-"descrizione": "Il sale marino grosso si ottiene dall'acqua di mare per evaporazione naturale e cristallizzazione frazionata con successivo lavaggio in controcorrente con salamoia satura, centrifugazione, essiccamento in forni a letto fluido a 225°C e vagliatura di selezione per risonanza.",
-"img": "https://www.studiocolordesign.it/wp-content/uploads/2020/03/1-sale-rosa_1920x1080-1920x1080-1.jpg"
+    "imgUrl": "https://scontent-mxp1-1.xx.fbcdn.net/v/t39.30808-6/355098498_105620022576635_6989344213827958710_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=783fdb&_nc_ohc=29EXYvn1XlUAX8Cjcr0&_nc_ht=scontent-mxp1-1.xx&oh=00_AfBJaxBp0i8UuEHpf75aB96emd3ly47PI-2aRnpzJQkyLw&oe=656FA2C3"
 }]

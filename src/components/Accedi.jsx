@@ -11,7 +11,6 @@ const Accedi = () => {
         event.preventDefault();
         if (multipleValContext) {
             let myUser = multipleValContext[3].filter(user => user.email.includes(event.target.elements[0].value));
-            console.log(myUser[0].password)
             if (myUser[0].password === event.target.elements[1].value)
                 setProfile(true)
         }

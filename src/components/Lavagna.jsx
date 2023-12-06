@@ -5,7 +5,6 @@ import { arrContext } from "../App";
 
 const Lavagna = ({ setForm, formOut, setBoolProp, boolProp }) => {
     let multipleValContext = useContext(arrContext);
-    console.log(`multipleValContext[3]: ${JSON.stringify(multipleValContext[3])}`)
 
     const deleteRow = (arg) => {
         let newPopArray = formOut.filter((el) => el !== arg);

@@ -19,7 +19,7 @@ function ModaleIngredienti(props) {
                 prezzo: event.target.elements[1].value,
                 quantita: event.target.elements[2].value,
                 descrizione: event.target.elements[3].value,
-                img: "https://www.my-personaltrainer.it/images/ricette/606/pesto-di-rucola.jpg"
+                imgUrl: "https://www.my-personaltrainer.it/images/ricette/606/pesto-di-rucola.jpg"
             };
             postIngrediente(buffer)
             let contatore =+ 1
@@ -38,13 +38,12 @@ function ModaleIngredienti(props) {
             },
             body: JSON.stringify(nuovoIngrediente),
         });
-        const resJSON = await response.json();
+        const resJSON = await response.json()
         setAggiuntaDB(resJSON)
     }
 
     useEffect(() => {
         multipleValContext[6](aggiuntaDB)
-        console.log("aggiuntaDB: " + JSON.stringify(aggiuntaDB))
     },[aggiuntaDB, multipleValContext])
 
     return (
