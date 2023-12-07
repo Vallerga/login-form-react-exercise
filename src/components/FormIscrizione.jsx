@@ -47,12 +47,12 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
         <div>
             <Form onSubmit={handleSubmit} className="d-flex flex-column align-items-start text-primary px-5 fs-3">
                 <Form.Group controlId="email">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control className="fs-4" type="email" placeholder="Enter email" />
+                    <Form.Label>Indirizzo Email</Form.Label>
+                    <Form.Control className="fs-4" type="email" placeholder="Inserisci email" />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="password">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control className="fs-4" type="password" placeholder="Password" />
+                    <Form.Control className="fs-4" type="password" placeholder="Inserisci password" />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="nazionalita">
                     <Form.Select className="fs-4" aria-label="Default select example">

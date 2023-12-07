@@ -7,12 +7,14 @@ const Accedi = () => {
     const [profile, setProfile] = useState(null);
     let multipleValContext = useContext(arrContext);
 
-    const handleSubmit2 = (event) => {
+    const handleLogin = (event) => {
         event.preventDefault();
         if (multipleValContext) {
-            let myUser = multipleValContext[3].filter(user => user.email.includes(event.target.elements[0].value));
+            let myUser = multipleValContext[3].filter((user) => user.email.includes(event.target.elements[0].value));
             if (myUser[0].password === event.target.elements[1].value)
                 setProfile(true)
+        } else {
+            alert("EmailPassword")
         }
     }
 
@@ -25,11 +27,11 @@ const Accedi = () => {
             <div className="heightSett">
                 <img className="position-absolute imgFullScreen" src={require("../assets/login_foto.webp")} alt="mortaio" />
             </div>
-            <Form onSubmit={handleSubmit2} className="d-flex flex-column align-items-center text-primary bgHome indexSett px-5">
+            <Form onSubmit={handleLogin} className="d-flex flex-column align-items-center text-primary bgHome indexSett px-5">
                 <h1 className="text-primary mb-3">SAPORI LIGURI</h1>
                 <Form.Group className="fs-4" controlId="email2">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control className="fs-4" type="email" placeholder="Enter email" />
+                    <Form.Label>Indirizzo Email</Form.Label>
+                    <Form.Control className="fs-4" type="email" placeholder="Email" />
                 </Form.Group>
                 <Form.Group className="fs-4 mb-4" controlId="password2">
                     <Form.Label>Password</Form.Label>
