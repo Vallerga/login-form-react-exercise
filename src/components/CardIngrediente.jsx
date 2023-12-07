@@ -8,7 +8,7 @@ const CardIngrediente = () => {
   const [delSensor, setDelSensor] = useState(false)
 
   const deleteIngrediente = async () => {
-    let indice = "http://localhost:8080/sapori_liguri_be/antonio/menu/pestoligure2/page?indice=" + String.toString(multipleValContext[0][multipleValContext[2]].indice)
+    let indice = "http://localhost:8080/saporiliguri/antonio/menu/pestoligure2/page?indice=" + String.toString(multipleValContext[0][multipleValContext[2]].indice)
     const response = await fetch(indice, {
       method: "DELETE",
       headers: {
@@ -19,7 +19,7 @@ const CardIngrediente = () => {
     const resJSON = await response.ok;
     if (resJSON) {
       const fetchData = async () => {
-        const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/home/login/listaprofili");
+        const response = await fetch("http://localhost:8080/saporiliguri/antonio/home/login/listaprofili");
         const resJSON = await response.json();
         multipleValContext[4](resJSON);
         setDelSensor(!delSensor);

@@ -30,7 +30,7 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
     }
 
     const postProfilo = async (nuovoProfile, oldArrayProfili) => {
-        const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/home/iscriviti", {
+        const response = await fetch("http://localhost:8080/saporiliguri/antonio/home/iscriviti", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

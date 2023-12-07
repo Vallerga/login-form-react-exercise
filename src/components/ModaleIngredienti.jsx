@@ -31,7 +31,7 @@ function ModaleIngredienti(props) {
     }
 
     const postIngrediente = async (nuovoIngrediente) => {
-        const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/menu/pestoligure/", {
+        const response = await fetch("http://localhost:8080/saporiliguri/antonio/menu/pestoligure/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -19,7 +19,7 @@ function App() {
   // Chiamata AJAX per scaricare dal DB i dati relativi alla ricetta pesto
   useEffect(() => {
     const fetchData = async () => {
-        const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/menu/pestoligure/listapesto");
+        const response = await fetch("http://localhost:8080/saporiliguri/antonio/menu/pestoligure/listapesto");
         const resJSON = await response.json();
         setIngredienti(resJSON);
       }        
@@ -29,7 +29,7 @@ function App() {
     // Chiamata AJAX per scaricare l'elenco degli utenti iscritti al servizio
     useEffect(() => {
       const fetchData = async () => {
-          const response = await fetch("http://localhost:8080/sapori_liguri_be/antonio/home/login/listaprofili");
+          const response = await fetch("http://localhost:8080/saporiliguri/antonio/home/login/listaprofili");
           const resJSON = await response.json();
           setProfili(resJSON);
         }
