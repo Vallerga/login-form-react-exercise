@@ -4,7 +4,7 @@
     "prezzo": "2,83€ al kg",
     "quantita": "70g",
     "descrizione": "Il Basilico Genovese DOP si contraddistingue per le foglie di dimensioni medio-piccole, forma ovale e convessa, colore verde tenue. L'altezza della pianta varia da media a molto alta. Il profumo è particolarmente delicato, privo di sentori di menta.",
-    "imgUrl": "../assets/basilico.jpg"
+    "imgUrl": "https://www.esperienzabenessere.it/wp-content/uploads/2020/06/basil-3405405_1920.jpg"
 },
 {
     "indice": 2,
@@ -28,7 +28,7 @@
     "prezzo": "1,50€ al kg",
     "quantita": "3g",
     "descrizione": "Il sale marino grosso si ottiene dall'acqua di mare per evaporazione naturale e cristallizzazione frazionata con successivo lavaggio in controcorrente con salamoia satura, centrifugazione, essiccamento in forni a letto fluido a 225°C e vagliatura di selezione per risonanza.",
-    "imgUrl": "mortaio.jpg"
+    "imgUrl": "https://images2.alphacoders.com/659/659148.jpg"
 },
 {
     "indice": 5,
