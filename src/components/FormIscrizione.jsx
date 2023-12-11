@@ -5,10 +5,13 @@ import { arrContext } from "../App";
 
 const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
     let multipleValContext = useContext(arrContext)
+    let appSetProfili = multipleValContext[4]
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        let check = (Object.keys(event.target.elements[0].value).length === 0) || (Object.keys(event.target.elements[1].value).length === 0) || (event.target.elements[2].value === "Nazionalità");
+        event.preventDefault()
+        let check = (Object.keys(event.target.elements[0].value).length === 0) ||
+            (Object.keys(event.target.elements[1].value).length === 0) ||
+            (event.target.elements[2].value === "Nazionalità")
         if (!check) {
             let buffer = {
                 email: event.target.elements[0].value,
@@ -18,7 +21,7 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
             let newArr = formOut.map((el) => el)
             newArr.push(buffer)
             setForm(newArr)
-            multipleValContext[4](newArr)
+            appSetProfili(newArr)
             // post nel db il profilo
             postProfilo(buffer, newArr)
             setBoolProp(true)
@@ -33,15 +36,15 @@ const FormIscrizione = ({ setForm, formOut, setBoolProp, boolProp }) => {
         const response = await fetch("http://localhost:8080/saporiliguri/antonio/home/iscriviti", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(nuovoProfile),
-          });
-          
-        const resJSON = await response.json();
+        });
+
+        const resJSON = await response.json()
         oldArrayProfili.push(resJSON)
-        multipleValContext[4](oldArrayProfili);
-      }
+        appSetProfili(oldArrayProfili)
+    }
 
     return (
         <div>

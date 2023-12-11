@@ -4,26 +4,34 @@ import { arrContext } from "../App";
 
 function ModaleIngredienti(props) {
     const [aggiuntaDB, setAggiuntaDB] = useState(null)
-    let multipleValContext = useContext(arrContext);
+    let multipleValContext = useContext(arrContext)
+    let appIngredienti = multipleValContext[0]
+    let appSetModificaDB = multipleValContext[5]
+
     const postaIngrediente = (event) => {
         event.preventDefault();
-        let check = (Object.keys(event.target.elements[0].value).length === 0)
-            || (Object.keys(event.target.elements[1].value).length === 0)
-            || (Object.keys(event.target.elements[2].value).length === 0)
-            || (Object.keys(event.target.elements[3].value).length === 0);
+
+        let nuovoIndice = appIngredienti.length + 1
+        let formIngrediente = event.target.elements[0].value
+        let formPrezzo = event.target.elements[1].value
+        let formQuantita = event.target.elements[2].value
+        let formDescrizione = event.target.elements[3].value
+
+        let check = (Object.keys(formIngrediente).length === 0) || (Object.keys(formPrezzo).length === 0)
+            || (Object.keys(formQuantita).length === 0) || (Object.keys(formDescrizione).length === 0)
         if (!check) {
-            let nuovoIndice = multipleValContext[0].length + 1
-            let buffer = {
+
+            let IngredienteDaPostare = {
                 indice: nuovoIndice,
-                ingrediente: event.target.elements[0].value,
-                prezzo: event.target.elements[1].value,
-                quantita: event.target.elements[2].value,
-                descrizione: event.target.elements[3].value,
+                ingrediente: formIngrediente,
+                prezzo: formPrezzo,
+                quantita: formQuantita,
+                descrizione: formDescrizione,
                 imgUrl: "https://www.my-personaltrainer.it/images/ricette/606/pesto-di-rucola.jpg"
             };
-            postIngrediente(buffer)
-            let contatore =+ 1
-            multipleValContext[6](contatore)
+            postIngrediente(IngredienteDaPostare)
+            let contatore = + 1
+            appSetModificaDB(contatore)
             event.target.reset()
         } else {
             alert("compilare tutti i campi")
@@ -43,8 +51,8 @@ function ModaleIngredienti(props) {
     }
 
     useEffect(() => {
-        multipleValContext[6](aggiuntaDB)
-    },[aggiuntaDB, multipleValContext])
+        appSetModificaDB(aggiuntaDB)
+    }, [aggiuntaDB, appSetModificaDB])
 
     return (
         <Modal

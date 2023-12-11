@@ -6,8 +6,10 @@ import { arrContext } from "../App";
 import ModaleIngredienti from "./ModaleIngredienti";
 
 const ListaIngredienti = () => {
-    let multipleValContext = useContext(arrContext);
-    const [modalShow, setModalShow] = useState(false);
+    let multipleValContext = useContext(arrContext)
+    const [modalShow, setModalShow] = useState(false)
+    let appSetIndiceCard = multipleValContext[1]
+    let appIngredienti = multipleValContext[0]
 
     return (
         <>
@@ -27,10 +29,9 @@ const ListaIngredienti = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {/* <LinkContainer key={i + "ingrediente"} onClick={() => multipleValContext[1](i)} className="w-100" to={"/ingrediente"}> */}
-                            {multipleValContext[0].map((ingrediente, i) => {
+                            {appIngredienti.map((ingrediente, i) => {
                                 return (
-                                    <LinkContainer key={i + "ingrediente"} onClick={() => multipleValContext[1](i)} className="w-100" to={"/ingrediente"}>
+                                    <LinkContainer key={i + "ingrediente"} onClick={() => appSetIndiceCard(i)} className="w-100" to={"/ingrediente"}>
                                         <tr className="text-center text-dark fs-4">
                                             <td>{ingrediente.indice}</td>
                                             <td className="text-start">{ingrediente.ingrediente}</td>

@@ -4,13 +4,14 @@ import { FcCancel } from "react-icons/fc";
 import { arrContext } from "../App";
 
 const Lavagna = ({ setForm, formOut, setBoolProp, boolProp }) => {
-    let multipleValContext = useContext(arrContext);
+    let multipleValContext = useContext(arrContext)
+    let appProfili = multipleValContext[3]
 
     const deleteRow = (arg) => {
-        let newPopArray = formOut.filter((el) => el !== arg);
-        setForm(newPopArray);
+        let newPopArray = formOut.filter((el) => el !== arg)
+        setForm(newPopArray)
         if (formOut.length === 1) {
-            setBoolProp(false);
+            setBoolProp(false)
         }
     }
 
@@ -28,7 +29,7 @@ const Lavagna = ({ setForm, formOut, setBoolProp, boolProp }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {false && multipleValContext[3].map((elem, i) => {
+                            {false && appProfili.map((elem, i) => {
                                 return (
                                     <tr key={i + " riga"}>
                                         <td>{elem.email}</td>

@@ -3,8 +3,8 @@ import FormIscrizione from "./FormIscrizione";
 import Lavagna from "./Lavagna";
 
 const Home = () => {
-  const [formOutput, setFormOutput] = useState([]);
-  const [bool, setBool] = useState(false);
+  const [formOutput, setFormOutput] = useState([])
+  const [bool, setBool] = useState(false)
   return (
     <>
       <div className="indexSett position-relative d-flex align-items-center justify-content-center">

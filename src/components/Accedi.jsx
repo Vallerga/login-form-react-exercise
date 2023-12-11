@@ -4,13 +4,14 @@ import { Link, Navigate } from "react-router-dom";
 import { arrContext } from "../App";
 
 const Accedi = () => {
-    const [profile, setProfile] = useState(null);
-    let multipleValContext = useContext(arrContext);
+    const [profile, setProfile] = useState(null)
+    let multipleValContext = useContext(arrContext)
+    let appProfili = multipleValContext[3]
 
     const handleLogin = (event) => {
-        event.preventDefault();
-        if (multipleValContext) {
-            let myUser = multipleValContext[3].filter((user) => user.email.includes(event.target.elements[0].value));
+        event.preventDefault()
+        if (appProfili) {
+            let myUser = appProfili.filter((user) => user.email.includes(event.target.elements[0].value))
             if (myUser[0].password === event.target.elements[1].value)
                 setProfile(true)
         } else {
@@ -19,7 +20,7 @@ const Accedi = () => {
     }
 
     if (profile !== null) {
-        return <Navigate to="/ListaIngredienti" />
+        return <Navigate to="/listaingredienti" />
     }
 
     return (
