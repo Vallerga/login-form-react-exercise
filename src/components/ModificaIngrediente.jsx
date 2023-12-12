@@ -7,7 +7,7 @@ function ModificaIngrediente(props) {
     let multipleValContext = useContext(arrContext)
     let appSetModificaDB = multipleValContext[5]
 
-    const postaIngrediente = (event) => {
+    const modificaIngrediente = (event) => {
         event.preventDefault();
 
         let indice = props.ingredienteSel.indice
@@ -32,7 +32,7 @@ function ModificaIngrediente(props) {
                 descrizione: formDescrizione,
                 imgUrl: props.ingredienteSel.imgUrl
             };
-            postIngrediente(IngredienteDaPostare)
+            putIngredienteFetch(IngredienteDaPostare)
             let contatore = + 1
             appSetModificaDB(contatore)
             event.target.reset()
@@ -41,7 +41,7 @@ function ModificaIngrediente(props) {
         }
     }
 
-    const postIngrediente = async (nuovoIngrediente) => {
+    const putIngredienteFetch = async (nuovoIngrediente) => {
         const response = await fetch(`http://localhost:8080/saporiliguri/antonio/menu/pestoligure/modifica/page?indice=${props.ingredienteSel.indice}`, {
             method: "PUT",
             headers: {
@@ -65,7 +65,7 @@ function ModificaIngrediente(props) {
             centered
         >            
             <Modal.Body>
-                <Form onSubmit={postaIngrediente} className="d-flex flex-column align-items-start text-primary px-5 fs-3">
+                <Form onSubmit={modificaIngrediente} className="d-flex flex-column align-items-start text-primary px-5 fs-3">
                     <Form.Group className="mb-4" controlId="Ingrediente">
                         <Form.Label>INGREDIENTE</Form.Label>
                         <Form.Control className="fs-4" type="text" placeholder="nome" />
