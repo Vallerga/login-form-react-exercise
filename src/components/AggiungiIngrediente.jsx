@@ -60,38 +60,33 @@ function ModaleIngredienti(props) {
             size="lg"
             aria-labelledby="aggiungiIngrediente"
             centered
-        >
-            <Modal.Header closeButton>
-                <Modal.Title id="aggiungiIngrediente">
-                    Personalizza la ricetta!
-                </Modal.Title>
-            </Modal.Header>
+        >            
             <Modal.Body>
                 <Form onSubmit={postaIngrediente} className="d-flex flex-column align-items-start text-primary px-5 fs-3">
                     <Form.Group className="mb-4" controlId="Ingrediente">
-                        <Form.Label>Ingrediente</Form.Label>
-                        <Form.Control className="fs-4" type="text" placeholder="Digita il nome" />
+                        <Form.Label>INGREDIENTE</Form.Label>
+                        <Form.Control className="fs-4" type="text" placeholder="nome" />
                     </Form.Group>
                     <Form.Group className="mb-4" controlId="prezzo">
-                        <Form.Label>prezzo</Form.Label>
-                        <Form.Control className="fs-4" type="text" placeholder="Digita prezzo al kg" />
+                        <Form.Label>PREZZO</Form.Label>
+                        <Form.Control className="fs-4" type="text" placeholder="Prezzo al kg" />
                     </Form.Group>
                     <Form.Group className="mb-4" controlId="quantità">
-                        <Form.Label>quantita</Form.Label>
-                        <Form.Control className="fs-4" type="text" placeholder="Digita la quantità" />
+                        <Form.Label>QUANTITA'</Form.Label>
+                        <Form.Control className="fs-4" type="text" placeholder="quantità" />
                     </Form.Group>
                     <Form.Group className="mb-4" controlId="descrizione">
-                        <Form.Label>Aggiungi una breve descrizione</Form.Label>
-                        <Form.Control className="fs-4" type="text" placeholder="Digita la descrizione" />
+                        <Form.Label>AGGIUNGI UNA BREVE DESCRIZIONE</Form.Label>
+                        <Form.Control className="fs-4" type="text" placeholder="descrizione" />
                     </Form.Group>
+                    <div className="d-flex justify-content-between my-3 w-100">
                     <Button className="fs-4" variant="primary" type="submit">
                         Finalizza
                     </Button>
+                    <Button className="fs-4" onClick={props.onHide}>Esci</Button>
+                    </div>
                 </Form>
             </Modal.Body>
-            <Modal.Footer>
-                <Button className="fs-4" onClick={props.onHide}>Esci</Button>
-            </Modal.Footer>
         </Modal>
     );
 }

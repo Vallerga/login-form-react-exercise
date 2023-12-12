@@ -1,9 +1,11 @@
-import { useContext, } from "react";
+import { useContext, useState, } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { arrContext } from "../App";
+import ModificaIngrediente from "./ModificaIngrediente";
 
 const CardIngrediente = () => {
+  const [modalShow, setModalShow] = useState(false)
   const navigate = useNavigate()
   let multipleValContext = useContext(arrContext)
   let appIngredienti = multipleValContext[0]
@@ -42,9 +44,14 @@ const CardIngrediente = () => {
             <Card.Title className="fs-3 fw-bold text-primary">{appIngredienti[appIndiceCard].quantita} - {appIngredienti[appIndiceCard].prezzo}</Card.Title>
             <Card.Text className="justifyCSS fs-4">
               {appIngredienti[appIndiceCard].descrizione}
-            </Card.Text>
-            <Link to={"/listaingredienti"}><Button className="m-3 fs-4" type="button">Indietro</Button></Link>
-            <Button className="m-3 fs-4" type="button" onClick={() => deleteIngrediente()}>cancella</Button>
+            </Card.Text >
+            <ModificaIngrediente ingredienteSel={appIngredienti[appIndiceCard]} show={modalShow}
+              onHide={() => setModalShow(false)} />
+            <div className="d-flex justify-content-between align-items-center">
+              <Button className="my-3 fs-4" type="button" onClick={() => setModalShow(true)}>Modifica</Button>
+              <Button className="my-3 fs-4" type="button" onClick={() => deleteIngrediente()}>Cancella</Button>
+              <Link to={"/listaingredienti"}><Button className="fs-4" type="button">Indietro</Button></Link>
+            </div>
           </Card.Body>
         </Card>
       </div>

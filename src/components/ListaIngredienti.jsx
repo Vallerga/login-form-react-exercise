@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { LinkContainer } from "react-router-bootstrap";
 import { useContext, useState } from "react";
 import { arrContext } from "../App";
-import ModaleIngredienti from "./ModaleIngredienti";
+import AggiungiIngrediente from "./AggiungiIngrediente";
 
 const ListaIngredienti = () => {
     let multipleValContext = useContext(arrContext)
@@ -46,7 +46,7 @@ const ListaIngredienti = () => {
                     <Button className="fs-4 my-3" variant="primary" onClick={() => setModalShow(true)}>
                         Vuoi personalizzare la ricetta?
                     </Button>
-                    <ModaleIngredienti
+                    <AggiungiIngrediente
                         show={modalShow}
                         onHide={() => setModalShow(false)}
                     />
